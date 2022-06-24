@@ -96,7 +96,7 @@ def get_store_item_demand_data():
     
     sales = get_sales_data()
     items = get_items_data()
-    stores = get_stores_data()
+    stores = get_store_data()
 
     sales = sales.rename(columns={'item': 'item_id', 'store': 'store_id'})
     df = pd.merge(sales, items, how= 'left', on='item_id')
